@@ -40,31 +40,30 @@
         <net.sf.json.version>2.4</net.sf.json.version>
         <activemq.version>5.14.3</activemq.version>
         <spark.version>2.3.3</spark.version>
-        <scala.version>2.13.0</scala.version>
+        <scala.version>2.11.8</scala.version>
         <hadoop.version>2.7.2</hadoop.version>
     </properties>
 
-   <!-- <dependencies>
+    <dependencies>
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
             <version>${scala.version}</version>
-            &lt;!&ndash;<scope>provided</scope>&ndash;&gt;
+            <!--<scope>provided</scope>-->
         </dependency>
 
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_2.11</artifactId>
             <version>${spark.version}</version>
-            &lt;!&ndash;<scope>provided</scope>&ndash;&gt;
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql_2.11</artifactId>
             <version>${spark.version}</version>
-            <scope>provided</scope>
         </dependency>
-    </dependencies>-->
+    </dependencies>
 
     <build>
         <plugins>

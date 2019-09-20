@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="Maven 1" modules="sparkcore_accumulator,sparkcore_partitioner,sparkcore_wordcount,sparkgraphx_helloworld,sparksql-hive,sparksql_helloworld,sparksql_safeMyAverage,sparksql_unsafeMyAverage,sparkstreaming_customerReceiver,sparkstreaming_helloworld,sparkstreaming_kafka,sparkstreaming_queueRdd,sparkstreaming_statefulWordCount,sparkstreaming_windowWordCount" />
+    <profile name="Maven 1" modules="spark,sparkcore_accumulator,sparkcore_partitioner,sparkcore_wordcount,sparkgraphx_helloworld,sparksql-hive,sparksql_helloworld,sparksql_safeMyAverage,sparksql_unsafeMyAverage,sparkstreaming_customerReceiver,sparkstreaming_helloworld,sparkstreaming_kafka,sparkstreaming_queueRdd,sparkstreaming_statefulWordCount,sparkstreaming_windowWordCount" />
   </component>
 </project>
