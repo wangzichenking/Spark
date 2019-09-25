@@ -558,3 +558,91 @@ org.apache.spark.SparkException: A master URL must be set in your configuration
 2017-07-31 12:37:34,749   WARN --- [main]  org.apache.spark.util.Utils(line:66) : Your hostname, macbook.local resolves to a loopback address: 127.0.0.1; using 172.16.55.1 instead (on interface vmnet1)
 2017-07-31 12:37:34,750   WARN --- [main]  org.apache.spark.util.Utils(line:66) : Set SPARK_LOCAL_IP if you need to bind to another address
 2017-07-31 12:37:34,786   INFO --- [main]  org.apache.spark.SparkContext(line:54) : Successfully stopped SparkContext
+2019-09-23 14:16:52,299   INFO --- [main]  org.apache.spark.SparkContext(line:54) : Running Spark version 2.3.3
+2019-09-23 14:16:52,759  ERROR --- [main]  org.apache.hadoop.util.Shell(line:396) : Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:378)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:393)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:386)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2468)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2468)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2468)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:292)
+	at com.atguigu.spark.WordCount$.main(WordCount.scala:17)
+	at com.atguigu.spark.WordCount.main(WordCount.scala)
+2019-09-23 14:16:52,812   INFO --- [main]  org.apache.spark.SparkContext(line:54) : Submitted application: WC
+2019-09-23 14:16:52,933   INFO --- [main]  org.apache.spark.SecurityManager(line:54) : Changing view acls to: wangzichen
+2019-09-23 14:16:52,933   INFO --- [main]  org.apache.spark.SecurityManager(line:54) : Changing modify acls to: wangzichen
+2019-09-23 14:16:52,934   INFO --- [main]  org.apache.spark.SecurityManager(line:54) : Changing view acls groups to: 
+2019-09-23 14:16:52,935   INFO --- [main]  org.apache.spark.SecurityManager(line:54) : Changing modify acls groups to: 
+2019-09-23 14:16:52,936   INFO --- [main]  org.apache.spark.SecurityManager(line:54) : SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(wangzichen); groups with view permissions: Set(); users  with modify permissions: Set(wangzichen); groups with modify permissions: Set()
+2019-09-23 14:16:54,154   INFO --- [main]  org.apache.spark.util.Utils(line:54) : Successfully started service 'sparkDriver' on port 56163.
+2019-09-23 14:16:54,172   INFO --- [main]  org.apache.spark.SparkEnv(line:54) : Registering MapOutputTracker
+2019-09-23 14:16:54,212   INFO --- [main]  org.apache.spark.SparkEnv(line:54) : Registering BlockManagerMaster
+2019-09-23 14:16:54,215   INFO --- [main]  org.apache.spark.storage.BlockManagerMasterEndpoint(line:54) : Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2019-09-23 14:16:54,215   INFO --- [main]  org.apache.spark.storage.BlockManagerMasterEndpoint(line:54) : BlockManagerMasterEndpoint up
+2019-09-23 14:16:54,222   INFO --- [main]  org.apache.spark.storage.DiskBlockManager(line:54) : Created local directory at C:\Users\wangzichen\AppData\Local\Temp\blockmgr-a80f3c6e-d17f-48fc-9c4d-aafc21a13b79
+2019-09-23 14:16:54,237   INFO --- [main]  org.apache.spark.storage.memory.MemoryStore(line:54) : MemoryStore started with capacity 1988.7 MB
+2019-09-23 14:16:54,248   INFO --- [main]  org.apache.spark.SparkEnv(line:54) : Registering OutputCommitCoordinator
+2019-09-23 14:16:54,314   INFO --- [main]  org.spark_project.jetty.util.log(line:192) : Logging initialized @2765ms
+2019-09-23 14:16:54,360   INFO --- [main]  org.spark_project.jetty.server.Server(line:351) : jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+2019-09-23 14:16:54,372   INFO --- [main]  org.spark_project.jetty.server.Server(line:419) : Started @2824ms
+2019-09-23 14:16:54,388   INFO --- [main]  org.spark_project.jetty.server.AbstractConnector(line:278) : Started ServerConnector@2cb3d0f7{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2019-09-23 14:16:54,388   INFO --- [main]  org.apache.spark.util.Utils(line:54) : Successfully started service 'SparkUI' on port 4040.
+2019-09-23 14:16:54,409   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@19fe4644{/jobs,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,409   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@186978a6{/jobs/json,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,410   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@2e029d61{/jobs/job,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,411   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@4052274f{/jobs/job/json,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,412   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@132ddbab{/stages,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,412   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@297ea53a{/stages/json,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,412   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@acb0951{/stages/stage,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,414   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@7a7471ce{/stages/stage/json,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,415   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@28276e50{/stages/pool,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,415   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@62e70ea3{/stages/pool/json,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,415   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@3efe7086{/storage,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,416   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@675d8c96{/storage/json,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,417   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@741b3bc3{/storage/rdd,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,417   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@2ed3b1f5{/storage/rdd/json,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,418   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@63648ee9{/environment,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,419   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@68d6972f{/environment/json,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,420   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@45be7cd5{/executors,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,420   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@7651218e{/executors/json,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,421   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@3185fa6b{/executors/threadDump,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,422   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@6d366c9b{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,428   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@5b58ed3c{/static,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,429   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@180e6ac4{/,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,431   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@42b64ab8{/api,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,437   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@319988b0{/jobs/job/kill,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,438   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@d5ae57e{/stages/stage/kill,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,441   INFO --- [main]  org.apache.spark.ui.SparkUI(line:54) : Bound SparkUI to 0.0.0.0, and started at http://wangzichen:4040
+2019-09-23 14:16:54,577   INFO --- [main]  org.apache.spark.executor.Executor(line:54) : Starting executor ID driver on host localhost
+2019-09-23 14:16:54,605   INFO --- [main]  org.apache.spark.util.Utils(line:54) : Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 56204.
+2019-09-23 14:16:54,606   INFO --- [main]  org.apache.spark.network.netty.NettyBlockTransferService(line:54) : Server created on wangzichen:56204
+2019-09-23 14:16:54,608   INFO --- [main]  org.apache.spark.storage.BlockManager(line:54) : Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2019-09-23 14:16:54,632   INFO --- [main]  org.apache.spark.storage.BlockManagerMaster(line:54) : Registering BlockManager BlockManagerId(driver, wangzichen, 56204, None)
+2019-09-23 14:16:54,635   INFO --- [dispatcher-event-loop-2]  org.apache.spark.storage.BlockManagerMasterEndpoint(line:54) : Registering block manager wangzichen:56204 with 1988.7 MB RAM, BlockManagerId(driver, wangzichen, 56204, None)
+2019-09-23 14:16:54,637   INFO --- [main]  org.apache.spark.storage.BlockManagerMaster(line:54) : Registered BlockManager BlockManagerId(driver, wangzichen, 56204, None)
+2019-09-23 14:16:54,637   INFO --- [main]  org.apache.spark.storage.BlockManager(line:54) : Initialized BlockManager: BlockManagerId(driver, wangzichen, 56204, None)
+2019-09-23 14:16:54,774   INFO --- [main]  org.spark_project.jetty.server.handler.ContextHandler(line:781) : Started o.s.j.s.ServletContextHandler@23aae55{/metrics/json,null,AVAILABLE,@Spark}
+2019-09-23 14:16:54,793   INFO --- [Thread-1]  org.apache.spark.SparkContext(line:54) : Invoking stop() from shutdown hook
+2019-09-23 14:16:54,799   INFO --- [Thread-1]  org.spark_project.jetty.server.AbstractConnector(line:318) : Stopped Spark@2cb3d0f7{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2019-09-23 14:16:54,801   INFO --- [Thread-1]  org.apache.spark.ui.SparkUI(line:54) : Stopped Spark web UI at http://wangzichen:4040
+2019-09-23 14:16:54,808   INFO --- [dispatcher-event-loop-6]  org.apache.spark.MapOutputTrackerMasterEndpoint(line:54) : MapOutputTrackerMasterEndpoint stopped!
+2019-09-23 14:16:54,817   INFO --- [Thread-1]  org.apache.spark.storage.memory.MemoryStore(line:54) : MemoryStore cleared
+2019-09-23 14:16:54,818   INFO --- [Thread-1]  org.apache.spark.storage.BlockManager(line:54) : BlockManager stopped
+2019-09-23 14:16:54,822   INFO --- [Thread-1]  org.apache.spark.storage.BlockManagerMaster(line:54) : BlockManagerMaster stopped
+2019-09-23 14:16:54,825   INFO --- [dispatcher-event-loop-3]  org.apache.spark.scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint(line:54) : OutputCommitCoordinator stopped!
+2019-09-23 14:16:54,829   INFO --- [Thread-1]  org.apache.spark.SparkContext(line:54) : Successfully stopped SparkContext
+2019-09-23 14:16:54,830   INFO --- [Thread-1]  org.apache.spark.util.ShutdownHookManager(line:54) : Shutdown hook called
+2019-09-23 14:16:54,831   INFO --- [Thread-1]  org.apache.spark.util.ShutdownHookManager(line:54) : Deleting directory C:\Users\wangzichen\AppData\Local\Temp\spark-2481daa3-f5c9-4bed-973e-fb747a1fd9d3

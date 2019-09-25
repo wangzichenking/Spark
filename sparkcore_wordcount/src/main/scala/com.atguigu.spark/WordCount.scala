@@ -12,7 +12,7 @@ object WordCount {
 
   def main(args: Array[String]) {
     //创建SparkConf()并设置App名称
-    val conf = new SparkConf().setMaster("local[3]").setAppName("WC")
+    val conf = new SparkConf().setMaster("local[*]").setAppName("WC")
     //创建SparkContext，该对象是提交spark App的入口
     val sc = new SparkContext(conf)
 

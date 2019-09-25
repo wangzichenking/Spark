@@ -9,11 +9,6 @@ import org.apache.spark.rdd.RDD
 import org.apache.spark.streaming.kafka010.{ConsumerStrategies, KafkaUtils, LocationStrategies}
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 
-/**
-  * Created by wuyufei on 06/09/2017.
-  */
-
-
 object createKafkaProducerPool{
 
   def apply(brokerList: String, topic: String):  GenericObjectPool[KafkaProducerProxy] = {
